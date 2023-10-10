@@ -141,6 +141,7 @@
   align-self: flex-start;
   margin-left: 20%;
   font-size: 2vw;
+  animation: glitch 2s infinite linear;
 }
 
 #loader_tech {
@@ -152,7 +153,6 @@
   font-size: 2vw;
   margin-right: 10%;
 }
-
 
 
 
@@ -185,15 +185,12 @@
 }
 
 @keyframes glitch {
-  0% { transform: translate(-20px, -10px); }
-  10% {  transform: translate(10px, 10px); }
-  20% { transform: translate(-10px, 10px); }
-  30% {  transform: translate(0px, 5px); }
-  40% {  transform: translate(-5px, 0px); }
-  50% {  transform: translate(5px, 0px); }
-  60% {  transform: translate(5px, 10px); }
-  70% {  transform: translate(-10px, 10px); }
-  80% {  transform: translate(20px, -10px); }
-  90% { transform: translate(-10px, 0px); }
-  100% { transform: translate(0); }
+  2%{opacity: 0;} 
+  3%{opacity: 1;}
+  6%{opacity: 0;}
+  7%{opacity: 1;}
+  25%{transform: translate(0);}
+  26%{transform: translate(-150%);}
+  27%{transform: translate(0);}
 }
+
