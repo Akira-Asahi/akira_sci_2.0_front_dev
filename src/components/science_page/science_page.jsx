@@ -34,7 +34,21 @@ export default function Sci_page() {
                     document.getElementById('sci_proj_2').style.height='15%'
                     document.getElementById('sci_proj_3').style.height='15%'
                     document.getElementById('sci_proj_4').style.height='15%'
-                    }}></div>
+                    }}>
+                        <div className="sci_proj_upper">
+                            <div className="sci_name_div"></div>
+                            <div className="sci_id"></div>
+                            <div className="sci_hash"></div>
+                        </div>
+                        <div className="sci_proj_lower">
+                            <div className="sci_proj_purpose"></div>
+                            <div className="sci_proj_progress_bar_div">
+                                <div className="sci_progress_proc"></div>
+                                <div className="sci_progress_bar"></div>
+                            </div>
+                            <div className="progress"></div>
+                        </div>
+                    </div>
 
                     <div className="sci_proj" id='sci_proj_2'
                     onClick={() => 
