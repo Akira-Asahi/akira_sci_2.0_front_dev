@@ -9,6 +9,7 @@ export default function Main_Page() {
 
     let [ page, set_page ] = useState('landing')
     let [ sci_button, set_sci_button ] = useState('science')
+    let [ tech_button, set_tech_button ] = useState('tech')
     let [ category, set_category ] = useState(null)
     let [ proj_page, set_proj_page] = useState(0)
 
@@ -24,15 +25,23 @@ export default function Main_Page() {
             <div id='lower_buttons'>
 
                 <div className="lower_button_div">
-                <button onClick={() => {set_page('science')
-                set_sci_button('sci updates')}}>{sci_button}</button>
+                {sci_button == 'science' && <button className="lower_buttons_but" onClick={() => {set_page('science')
+                set_sci_button('sci_updates')
+                set_tech_button('tech')}}>science</button>}
+                {sci_button == 'sci_updates' && <button className="lower_buttons_but" onClick={() => {set_page('science')
+                set_sci_button('science')}}>sci updates</button>}
                 </div>
+                
                 <div className="lower_button_div">
-                <button onClick={()=>{set_page('tech')
-                set_sci_button('science')}}>tech</button>
+                {tech_button == 'tech' && <button className="lower_buttons_but" onClick={() => {set_page('tech')
+                set_tech_button('tech_updates')
+                set_sci_button('science')}}>technology</button>}
+                {tech_button == 'tech_updates' && <button className="lower_buttons_but" onClick={() => {set_page('tech')
+                set_sci_button('science')}}>tech updates</button>}
                 </div>
+
                 <div className="lower_button_div">
-                <button>about</button>
+                <button className="lower_buttons_but">about</button>
                 </div>
             </div>
         </div>

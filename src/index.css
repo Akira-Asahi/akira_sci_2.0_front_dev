@@ -42,6 +42,10 @@ button {
   --white-dim: #ffffffba;
 }
 
+:root {
+  --grey-dim : #2f2f2fba;
+}
+
 /* top_components */
 
 #app {
@@ -252,7 +256,7 @@ button {
   align-content: center;
   font-size: 2vw;
   font-family: sci;
-  color: var(--white-dim);
+  color: var(--grey-dim);
 }
 
 .lower_button_div {
@@ -260,6 +264,17 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.lower_buttons_but {
+  transition: color 0.7s ease-out;
+  transform: translate(0, -150%);
+  animation: lower_buttons 1.5s forwards;
+}
+
+.lower_buttons_but:hover {
+  color: black
 }
 
 #content {
@@ -329,11 +344,11 @@ button {
   height: 15%;
   width: 80%;
   border: black 1px solid;
-  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, height 1s ease-out;
 }
 
 .sci_proj:hover {
-  transform: translate(10px, 5px);
+  transform: translate(0, 5px);
 }
 
 #sci_buttons_top_div {
@@ -380,12 +395,35 @@ button {
   background-color: black;
 }
 
+/* science main details */
 
+#sci_info_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3%;
+}
 
+#science_capital {
+  width: 80%;
+  height: 35%;
+  border: black 1px solid;
+}
+
+#science_details {
+  width: 80%;
+  height: 35%;
+  border: black 1px solid;
+}
 
 
 
 /* animations */
+
+@keyframes opacity {
+  100%{opacity: 1;}
+}
 
 @keyframes rotate {
   0.1%{opacity: 1;}
@@ -418,4 +456,8 @@ button {
 
 @keyframes main_page {
   100%{opacity: 1;}
+}
+
+@keyframes lower_buttons {
+  100%{transform: translate(0);}
 }
