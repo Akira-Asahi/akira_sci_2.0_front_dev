@@ -255,6 +255,13 @@ button {
   color: var(--white-dim);
 }
 
+.lower_button_div {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #content {
   grid-area: w;
 }

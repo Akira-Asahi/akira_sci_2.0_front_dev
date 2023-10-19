@@ -22,11 +22,18 @@ export default function Main_Page() {
             </div>
 
             <div id='lower_buttons'>
+
+                <div className="lower_button_div">
                 <button onClick={() => {set_page('science')
-            set_sci_button('sci updates')}}>{sci_button}</button>
+                set_sci_button('sci updates')}}>{sci_button}</button>
+                </div>
+                <div className="lower_button_div">
                 <button onClick={()=>{set_page('tech')
-            set_sci_button('science')}}>tech</button>
+                set_sci_button('science')}}>tech</button>
+                </div>
+                <div className="lower_button_div">
                 <button>about</button>
+                </div>
             </div>
         </div>
     )
