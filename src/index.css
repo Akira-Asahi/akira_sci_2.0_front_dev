@@ -46,6 +46,50 @@ button {
   --grey-dim : #2f2f2fba;
 }
 
+
+/* animations */
+
+@keyframes opacity {
+  100%{opacity: 1;}
+}
+
+@keyframes rotate {
+  0.1%{opacity: 1;}
+  100% {rotate: 360deg; opacity: 1;}
+}
+
+@keyframes loader_opacity {
+  50%{opacity: 1}
+  100%{opacity: 0;}
+}
+
+@keyframes logo_appears {  
+    100%{opacity: 1;}
+}
+
+@keyframes glitch {
+  2%{opacity: 0;} 
+  3%{opacity: 1;}
+  6%{opacity: 0;}
+  7%{opacity: 1;}
+  25%{transform: translate(0);}
+  26%{transform: translate(-150%);}
+  27%{transform: translate(0);}
+}
+
+@keyframes curtains {
+  80%{transform: scale(1, 1);}
+  100%{transform: scale(1, 1); background-color: var(--main-grey);backdrop-filter: none;}
+}
+
+@keyframes main_page {
+  100%{opacity: 1;}
+}
+
+@keyframes lower_buttons {
+  100%{transform: translate(0);}
+}
+
 /* top_components */
 
 #app {
@@ -345,6 +389,95 @@ button {
   width: 80%;
   border: black 1px solid;
   transition: transform 1s ease-out, height 1s ease-out;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sci_proj_upper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  transition: height 1s ease-out;
+}
+
+.sci_name_div {
+  width: 60%;
+}
+
+.sci_id {
+  width: 20%;
+}
+
+.sci_id_div {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sci_id_p {
+  font-family: gruppo;
+  font-size: 1.5vw;
+  height: fit-content;
+  width: fit-content;
+}
+
+.sci_hash {
+  width: 20%;
+}
+
+.sci_hash_div {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sci_hash_p {
+  font-family: gruppo;
+  font-size: 1.5vw;
+  height: fit-content;
+  width: fit-content;
+}
+
+.sci_proj_lower {
+  display: none;
+  height: 50%;
+  flex-direction: column;
+  opacity: 0;
+  animation: opacity 1s forwards;
+}
+
+.sci_name_div {
+  display: flex;
+  flex-direction: column;
+}
+
+.sci_name_name {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sci_lab {
+  height: 20%;
+}
+
+.sci_name_p {
+  font-family: gruppo;
+  font-size: 2.2vw;
+  height: fit-content;
+  margin-left: 5%;
+}
+
+.sci_lab_p {
+  font-family: gruppo;
+  font-size: 1.5vw;
+  height: fit-content;
+  margin-left: 7% ;
 }
 
 .sci_proj:hover {
@@ -417,47 +550,55 @@ button {
   border: black 1px solid;
 }
 
+/* sci lower div */
 
-
-/* animations */
-
-@keyframes opacity {
-  100%{opacity: 1;}
+.sci_proj_purpose {
+  height: 33%;
 }
 
-@keyframes rotate {
-  0.1%{opacity: 1;}
-  100% {rotate: 360deg; opacity: 1;}
+.sci_proj_progress_perc_div {
+  height: 20%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
-@keyframes loader_opacity {
-  50%{opacity: 1}
-  100%{opacity: 0;}
+.sci_progress_proc {
+  width: fit-content;
+  margin-right: 5%;
+  font-family: sci;
+  font-size: 1vw;
 }
 
-@keyframes logo_appears {  
-    100%{opacity: 1;}
+.progress_bar {
+  height: 47%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-@keyframes glitch {
-  2%{opacity: 0;} 
-  3%{opacity: 1;}
-  6%{opacity: 0;}
-  7%{opacity: 1;}
-  25%{transform: translate(0);}
-  26%{transform: translate(-150%);}
-  27%{transform: translate(0);}
+.sci_proj_purp {
+  font-size: 1.5vw;
+  font-family: gruppo;
+  margin-left: 3%;
 }
 
-@keyframes curtains {
-  80%{transform: scale(1, 1);}
-  100%{transform: scale(1, 1); background-color: var(--main-grey);backdrop-filter: none;}
+.progress_outer {
+  width: 90%;
+  height: 20%;
+  background-color: black;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes main_page {
-  100%{opacity: 1;}
-}
-
-@keyframes lower_buttons {
-  100%{transform: translate(0);}
+.progress_inner {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 110%;
+  border-radius: 20px;
+  background-color: white;
+  transition: width 2s ease-out;
+  transform-origin: left;
 }

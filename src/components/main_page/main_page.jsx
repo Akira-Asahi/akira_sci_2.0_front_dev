@@ -29,15 +29,15 @@ export default function Main_Page() {
                 set_sci_button('sci_updates')
                 set_tech_button('tech')}}>science</button>}
                 {sci_button == 'sci_updates' && <button className="lower_buttons_but" onClick={() => {set_page('science')
-                set_sci_button('science')}}>sci updates</button>}
+                set_sci_button('science')}}>updates</button>}
                 </div>
                 
                 <div className="lower_button_div">
                 {tech_button == 'tech' && <button className="lower_buttons_but" onClick={() => {set_page('tech')
                 set_tech_button('tech_updates')
-                set_sci_button('science')}}>technology</button>}
+                set_sci_button('science')}}>tech</button>}
                 {tech_button == 'tech_updates' && <button className="lower_buttons_but" onClick={() => {set_page('tech')
-                set_sci_button('science')}}>tech updates</button>}
+                set_sci_button('science')}}>updates</button>}
                 </div>
 
                 <div className="lower_button_div">

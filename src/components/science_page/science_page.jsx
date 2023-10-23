@@ -34,19 +34,44 @@ export default function Sci_page() {
                     document.getElementById('sci_proj_2').style.height='15%'
                     document.getElementById('sci_proj_3').style.height='15%'
                     document.getElementById('sci_proj_4').style.height='15%'
+                    document.getElementById('sci_proj_1').childNodes[0].style.height='50%'
+                    setTimeout(function () {document.getElementById('sci_proj_1').childNodes[1].style.display='flex'}, 1000)
+                    setTimeout(() => {
+                        document.getElementById('sci_proj_1').childNodes[1].childNodes[2].childNodes[0].childNodes[0].style.width='75%' 
+                    }, 1500);
                     }}>
                         <div className="sci_proj_upper">
-                            <div className="sci_name_div"></div>
-                            <div className="sci_id"></div>
-                            <div className="sci_hash"></div>
+                            <div className="sci_name_div">
+                                <div className="sci_name_name">
+                                    <p className="sci_name_p">New protein structure</p>
+                                </div>
+                                <div className="sci_lab">
+                                    <p className="sci_lab_p">MIT Lab</p>
+                                </div>
+                            </div>
+                            <div className="sci_id">
+                                <div className="sci_id_div">
+                                    <p className="sci_id_p">b-2834</p>
+                                </div>
+                            </div>
+                            <div className="sci_hash">
+                                <div className="sci_hash_div">
+                                    <p className="sci_hash_p">#bio</p>
+                                </div>
+                            </div>
                         </div>
                         <div className="sci_proj_lower">
-                            <div className="sci_proj_purpose"></div>
-                            <div className="sci_proj_progress_bar_div">
-                                <div className="sci_progress_proc"></div>
-                                <div className="sci_progress_bar"></div>
+                            <div className="sci_proj_purpose">
+                                <p className="sci_proj_purp">This is the purpose of the research.</p>
                             </div>
-                            <div className="progress"></div>
+                            <div className="sci_proj_progress_perc_div">
+                                <p className="sci_progress_proc">38%</p>
+                            </div>
+                            <div className="progress_bar">
+                                <div className="progress_outer">
+                                    <div className="progress_inner"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
