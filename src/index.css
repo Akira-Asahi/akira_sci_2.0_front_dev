@@ -6,6 +6,7 @@
   padding: 0;
   border: none;
   cursor: default;
+
 }
 
 button {
@@ -542,13 +543,119 @@ button {
   width: 80%;
   height: 35%;
   border: black 1px solid;
+  display: flex;
+  flex-direction: column;
 }
 
-#science_details {
-  width: 80%;
-  height: 35%;
-  border: black 1px solid;
+#capital_name_div {
+  height: 30%;
+  font-family: gruppo;
+  font-size: 3vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
+
+#capital_name {
+  width: fit-content;
+  margin-left: 5%;
+  height: fit-content;
+  font-weight: bold;
+}
+
+#capital_requested {
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+}
+
+#sci_cap_text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#sci_cap_money {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#sci_cap_p {
+  width: fit-content;
+  height: fit-content;
+  font-family: gruppo;
+  font-size: 2.5vw;
+}
+
+#sci_money {
+  width: fit-content;
+  height: fit-content;
+  font-family: gruppo;
+  font-size: 2.5vw;
+  font-weight: bold;
+}
+
+
+
+#capital_fulfillment {
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+}
+
+#cap_ful_div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#cap_ful_money {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#cap_ful_p {
+  width: fit-content;
+  height: fit-content;
+  font-family: gruppo;
+  font-size: 2.5vw;
+}
+
+#sci_cap_perc {
+  width: fit-content;
+  height: fit-content;
+  font-family: gruppo;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+
+#capital_support {
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  width: 90%;
+  margin-right: 10%;
+  flex-wrap: wrap;
+}
+
+#sci_sup_bt {
+  width: fit-content;
+  height: fit-content;
+  font-family: gruppo;
+  font-size: 2.5vw;
+  transition: transform 1s ease-out;
+}
+
+
 
 /* sci lower div */
 
@@ -749,5 +856,102 @@ button {
   width: fit-content;
 }
 
+/* sci pop */
+
+#sci_support_pop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sci_sup_pop_div {
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.584);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#sci_sup_close_div {
+  flex-wrap: wrap;
+  height: 5%;
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+#sci_sup_close {
+  margin-right: 3%;
+  height: 6px;
+  width: 3%;
+  background-color: black;
+  border-radius: 20px;
+
+}
+
+#sci_sup_bt:hover {
+  transform: translate(-10%);
+}
+
 /* sci details */
 
+#science_details {
+  width: 80%;
+  height: 35%;
+  border: black 1px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+#sci_det_upper {
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+}
+
+#sci_pd_text {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sci_pd_p {
+  width: fit-content;
+  height: fit-content;
+  font-size: 3vw;
+  font-family: gruppo;
+  font-weight: bold;
+}
+
+#sci_pd_next_div {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#sci_pd_next {
+  margin-right: 20%;
+  width: fit-content;
+  height: fit-content;
+  font-size: 5vw;
+  font-family: gruppo;
+  font-weight: bold;
+  transition: transform 1s ease-out;
+}
+
+#sci_pd_next:hover {
+  transform: translate(-20%);
+}
+
+
+#sci_det_img {
+  height: 70%;
+  background-image: url('./dna-genetics-science-biology-1.webp');
+  background-size:cover;
+}

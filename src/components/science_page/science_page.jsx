@@ -3,12 +3,14 @@ import { useState } from "react"
 
 import Sci_filter from "./sci_filter"
 import Sci_details from "./sci_details"
+import Sci_support_pop from "./sci_support"
 
 export default function Sci_page() {
 
     let [ active, set_active ] = useState(0)
     let [ filter, set_filter ] = useState(null)
     let [ details, set_details ] = useState(null)
+    let [ support, set_support ] =useState(null)
     
 
     return (
@@ -116,10 +118,48 @@ export default function Sci_page() {
                 </div>
 
                 <div id="sci_info_div">
-                    <div id='science_capital'></div>
-                    <div id='science_details' onClick={() => set_details(true)}>
-                        {details && < Sci_details set_details={set_details} />}
+                    <div id='science_capital'>
+                        <div id='capital_name_div'>
+                            <div id='capital_name'>Capital</div>
+                        </div>
+                        <div id='capital_requested'>
+                            <div id='sci_cap_text'>
+                                <p id='sci_cap_p'>Requested</p>
+                            </div>
+                            <div id='sci_cap_money'>
+                                <p id='sci_money'>$100,000</p>
+                            </div>
+                        </div>
+                        <div id='capital_fulfillment'>
+                            <div id='cap_ful_div'>
+                                <p id='cap_ful_p'>Fulfillment</p>
+                            </div>
+
+                            <div id='cap_ful_money'>
+                                <p id='sci_cap_perc'>20%</p>
+                            </div>
+                        </div>
+
+                        <div id='capital_support'>
+                            <button id='sci_sup_bt' onClick={() => set_support(true)}>support</button>
+                        </div>
+
                     </div>
+                    <div id='science_details'>
+                        <div id='sci_det_upper'>
+                            <div id='sci_pd_text'>
+                                <p id='sci_pd_p'>Project Details</p>
+                            </div>
+                            <div id='sci_pd_next_div'>
+                                <p id='sci_pd_next'>{'>'}</p>
+                            </div>
+                        </div>
+                        <div id='sci_det_img'>
+
+                        </div>
+                    </div>
+
+                    {support && <Sci_support_pop set_support={set_support} />}
                 </div>
 
             </div>
