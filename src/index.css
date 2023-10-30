@@ -91,6 +91,10 @@ button {
   100%{transform: translate(0);}
 }
 
+@keyframes slide_left {
+  100%{top:0;left:0}
+}
+
 /* top_components */
 
 #app {
@@ -381,7 +385,7 @@ button {
 #sci_info_div {
   width: 40%;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: 5%;
 }
 
@@ -535,12 +539,12 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: 3%;
 }
 
 #science_capital {
-  width: 80%;
+  width: 85%;
   height: 35%;
   border: black 1px solid;
   display: flex;
@@ -901,7 +905,7 @@ button {
 /* sci details */
 
 #science_details {
-  width: 80%;
+  width: 85%;
   height: 35%;
   border: black 1px solid;
   display: flex;
@@ -955,3 +959,90 @@ button {
   background-image: url('./dna-genetics-science-biology-1.webp');
   background-size:cover;
 }
+
+
+/* sci details page */
+
+#sci_details {
+  position: fixed;
+  z-index: 10;
+  background-color: black;
+  left: 100%;
+  top: 0;
+  color: white;
+  transition: left 2s ease-in-out;
+}
+
+#sci_det_close_div {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#sci_det_close {
+  font-family: gruppo;
+  font-size: 5vw;
+  margin-left: 3%;
+}
+
+#sci_details_content {
+  display: flex;
+  flex-direction: column;
+}
+
+#sci_det_lower_div {
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+}
+
+
+#sci_det_lower_left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5%;
+}
+
+#sci_det_project {
+  height: 30%;
+  background-color: white;
+  width: 80%;
+}
+
+#sci_det_validation_div {
+  height: 60%;
+  background-color: white;
+  width: 80%;
+}
+
+#sci_det_lower_right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5%;
+}
+
+#sci_det_capital_div {
+  height: 30%;
+  background-color: white;
+  width: 85%;
+}
+
+#sci_det_team_div {
+  height: 30%;
+  background-color: white;
+  width: 85%;
+}
+
+#sci_det_updates_div {
+  height: 25%;
+  background-color: white;
+  width: 85%;
+}
+

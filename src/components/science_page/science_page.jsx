@@ -9,7 +9,7 @@ export default function Sci_page() {
 
     let [ active, set_active ] = useState(0)
     let [ filter, set_filter ] = useState(null)
-    let [ details, set_details ] = useState(null)
+    let [ content, set_content ] = useState(null)
     let [ support, set_support ] =useState(null)
     
 
@@ -151,7 +151,10 @@ export default function Sci_page() {
                                 <p id='sci_pd_p'>Project Details</p>
                             </div>
                             <div id='sci_pd_next_div'>
-                                <p id='sci_pd_next'>{'>'}</p>
+                                <p id='sci_pd_next' onClick={() => {
+                                document.getElementById('sci_details').style.left='0'
+                                set_content(true)
+                                }}>{'>'}</p>
                             </div>
                         </div>
                         <div id='sci_det_img'>
@@ -160,6 +163,7 @@ export default function Sci_page() {
                     </div>
 
                     {support && <Sci_support_pop set_support={set_support} />}
+                    <Sci_details content={content} set_content={set_content}/>
                 </div>
 
             </div>
