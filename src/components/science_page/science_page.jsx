@@ -9,8 +9,9 @@ export default function Sci_page() {
 
     let [ active, set_active ] = useState(0)
     let [ filter, set_filter ] = useState(null)
-    let [ content, set_content ] = useState(null)
     let [ support, set_support ] =useState(null)
+    let [ content, set_content ] = useState(null)
+
     
 
     return (
@@ -154,6 +155,9 @@ export default function Sci_page() {
                                 <p id='sci_pd_next' onClick={() => {
                                 document.getElementById('sci_details').style.left='0'
                                 set_content(true)
+                                setTimeout(() => {
+                                    document.getElementById('sci_details').style.backdropFilter='blur(20px)'
+                                }, 2000);
                                 }}>{'>'}</p>
                             </div>
                         </div>

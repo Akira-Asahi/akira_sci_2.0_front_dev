@@ -966,11 +966,11 @@ button {
 #sci_details {
   position: fixed;
   z-index: 10;
-  background-color: black;
+  background-color: var(--grey-dim);
   left: 100%;
   top: 0;
   color: white;
-  transition: left 2s ease-in-out;
+  transition: left 2s ease-in-out, backdrop-filter 1s ease-out;
 }
 
 #sci_det_close_div {
@@ -989,6 +989,8 @@ button {
 #sci_details_content {
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
 
 #sci_det_lower_div {
