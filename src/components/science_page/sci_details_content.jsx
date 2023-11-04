@@ -1,11 +1,19 @@
 
 import { useState } from "react";
 
+import Sci_sources from "./sci_sources";
+import Sci_capital_details from "./sci_capital_details";
+import Sci_media from "./sci_media";
+
 export default function Sci_details_content ( {set_content} ) {
 
     setTimeout(() => {
         document.getElementById('sci_details_content').style.opacity='1'
     }, 2500);
+
+    let [ sources, set_sources ] = useState(null)
+    let [ capital, set_capital ] = useState(null)
+    let [ media, set_media ] = useState(null)
 
     return (
         <>
@@ -38,18 +46,21 @@ export default function Sci_details_content ( {set_content} ) {
                             </div>
                        </div>
                        <div id="sci_det_pr_right_div">
-                            <div id='sci_media'>media</div>
+                            <div id='sci_media' onClick={() => set_media(true)}>media</div>
                             <div id='sci_youtube'>youtube</div>
                        </div>
                     </div>
                     
                     <div id='sci_det_validation_div'>
+                        {sources && <Sci_sources set_sources={set_sources}/>}
+                        {capital && <Sci_capital_details set_capital={set_capital}/>}
+                        {media && <Sci_media set_media={set_media}/>}
                         <div id='sci_det_upper_div'>
                             <div id='sci_valid_div'>
                                 <p id='sci_det_valid_p'>Validation</p>
                             </div>
                             <div id='sci_sources_div'>
-                                <div id='sci_sources_p'>sources</div>
+                                <div id='sci_sources_p' onClick={() => set_sources(true)}>sources</div>
                             </div>
                         </div>
 
@@ -66,7 +77,7 @@ export default function Sci_details_content ( {set_content} ) {
                         
                         <div id='sci_det_top_div'>
                             <div id='sci_det_cap_p'>Capital</div>
-                            <div id='sci_det_details'>details</div>
+                            <div id='sci_det_details' onClick={() => set_capital(true)}>details</div>
                         </div>
 
                         <div id='sci_det_middle_div'>
